@@ -1,0 +1,241 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*! Custom CSS only (no Bootstrap classes) */
+
+/* General reset and box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Headings */
+h4 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: calc(1.275rem + 0.3vw);
+}
+
+@media (min-width: 1200px) {
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* Custom button colors */
+.btn-danger {
+  color: #fff;
+  background-color: #e74a3b;
+  border-color: #e74a3b;
+}
+
+.btn-danger:hover {
+  color: #fff;
+  background-color: #c43f32;
+  border-color: #b93b2f;
+}
+
+.btn-danger:focus {
+  color: #fff;
+  background-color: #c43f32;
+  border-color: #b93b2f;
+  box-shadow: 0 0 0 .25rem rgba(235, 101, 88, .5);
+}
+
+.btn-danger:active {
+  color: #fff;
+  background-color: #b93b2f;
+  border-color: #ad382c;
+}
+
+.btn-danger:active:focus {
+  box-shadow: 0 0 0 .25rem rgba(235, 101, 88, .5);
+}
+
+.btn-danger:disabled {
+  color: #fff;
+  background-color: #e74a3b;
+  border-color: #e74a3b;
+}
+
+/* Card styling */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #e3e6f0;
+  border-radius: .35rem;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+}
+
+/* Form customizations */
+form.user .form-control-user {
+  font-size: .8rem;
+  border-radius: 10rem;
+  padding: 1rem;
+}
+
+form.user .btn-user {
+  font-size: .8rem;
+  border-radius: 10rem;
+  padding: .75rem 1rem;
+}
+
+/* Background image */
+/* Background image */
+.bg-login-image, .bg-error-image {
+  background-image: url('https://www.voxens.fr/wp-content/uploads/2024/04/Voxens_madagascar.png');
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 100%;
+  margin-top: 50px;
+}
+
+
+
+/* Remove border radius from input, select, and textarea elements */
+.form-control,
+.btn,
+.form-select {
+  border-radius: 0 !important;
+}
+
+/* If you want to target specific input types */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  border-radius: 0 !important;
+}
+
+/* Additional adjustments for buttons if needed */
+.btn {
+  border-radius: 0 !important;
+}
+
+/* If you want to ensure consistency across all child elements of forms */
+form .form-control,
+form .btn,
+form .form-select {
+  border-radius: 0 !important;
+}
+
+
+/* Override Bootstrap primary, secondary, and additional colors */
+:root {
+  --bs-primary: #266c47 !important;
+  /* Custom Primary Color */
+  --bs-secondary: #6bc091 !important;
+  /* Custom Secondary Color */
+  --bs-success: #266c47 !important;
+  /* Custom Success Color */
+  --bs-danger: #d33721 !important;
+  /* Custom Danger Color */
+}
+
+/* You can also override specific components like buttons if needed */
+.btn-primary {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+}
+
+.btn-secondary {
+  background-color: var(--bs-secondary) !important;
+  border-color: var(--bs-secondary) !important;
+}
+
+.btn-danger {
+  background-color: var(--bs-danger) !important;
+  border-color: var(--bs-danger) !important;
+}
+
+
+.pagination {
+  justify-content: center;
+}
+
+.page-item.active .page-link {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+}
+
+.page-link {
+  color: var(--bs-primary) !important;
+  border: 1px solid var(--bs-primary) !important;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  border-radius: 0 !important;
+}
+
+.pagination .page-link {
+  border-radius: 0 !important;
+}
+
+
+.pagination .page-link:hover {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  color: #fff !important;
+}
+
+
+.page-item.disabled .page-link {
+  color: #6c757d !important;
+  background-color: #fff !important;
+  border-color: #ddd !important;
+}
+
+
+
+.form-control:focus {
+  border-color: var(--bs-primary) !important; 
+  box-shadow: 0 0 0 0.25rem rgba(38, 108, 71, 0.25) !important; 
+  border-radius: 0 !important; 
+}
+
+
+.select2-container--default .select2-selection--single:focus {
+  border-color: var(--bs-primary) !important; 
+  box-shadow: 0 0 0 0.25rem rgba(38, 108, 71, 0.25) !important;
+  border-radius: 0 !important;
+}
+
+/* Override the focus styles for textareas */
+textarea.form-control:focus {
+  border-color: var(--bs-primary) !important;
+  box-shadow: 0 0 0 0.25rem rgba(38, 108, 71, 0.25) !important; 
+  border-radius: 0 !important;
+}
+
+
+button:focus, .btn:focus {
+  box-shadow: 0 0 0 0.25rem rgba(38, 108, 71, 0.5) !important;
+  outline: none !important; 
+  border-radius: 0 !important; 
+}
+
+
+input[type="checkbox"]:focus, input[type="radio"]:focus {
+  border-color: var(--bs-primary) !important;
+  box-shadow: 0 0 0 0.25rem rgba(38, 108, 71, 0.25) !important;
+  border-radius: 0 !important; 
+}

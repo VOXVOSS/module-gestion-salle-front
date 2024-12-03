@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-9 col-lg-12 col-xl-10">
+            <div class="card shadow-lg o-hidden border-0 my-5">
+                <div class="card-body p-0">
+                    <div class="row">
+                        <!-- Left Side Image -->
+                        <div class="col-lg-6 d-none d-lg-flex">
+                            <div class="flex-grow-1 bg-login-image"></div>
+                        </div>
+                        <!-- Right Side Content -->
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="text-dark mb-4">Mon Profil</h1>
+                                    <div *ngIf="user">
+                                        <table class="table table-striped table-bordered">
+                                            <tr>
+                                                <td class="text-start">Login:</td>
+                                                <td>{{ user.login }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-start">Matricule:</td>
+                                                <td>{{ user.matricule }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-start">Nom:</td>
+                                                <td>{{ user.nom }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-start">Email:</td>
+                                                <td>{{ user.email || 'Non renseigné' }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-start">Supérieur Hiérarchique:</td>
+                                                <td>{{ user.superieur_hierarchique }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-start">Date d'Intégration:</td>
+                                                <td>{{ user.date_integration | date }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-start">Statut:</td>
+                                                <td>{{ user.est_actif ? 'Actif' : 'Inactif' }}</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <div *ngIf="error" class="alert alert-danger mt-3">
+                                        <p>{{ error }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
